@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg4485"
+   width="200"
+   height="50"
+   viewBox="0 0 200 50"
+   sodipodi:docname="button-bg.png"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata4491">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4489">
+    <linearGradient
+       id="linearGradient4497"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#f300ff;stop-opacity:1;"
+         offset="0"
+         id="stop4495" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview4487"
+     showgrid="false"
+     inkscape:zoom="1.2727922"
+     inkscape:cx="63.796659"
+     inkscape:cy="23.370491"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4485" />
+  <path
+     style="fill:#552483;fill-opacity:1"
+     d="m 9.5931768,49.326731 c -3.0129944,-0.24589 -5.7909652,-0.95319 -6.1732692,-1.57177 -1.504623,-2.43453 -2.03432,-13.67989 -1.351459,-28.6912 L 2.7845246,3.3222666 22.427937,2.1245226 c 12.542614,-0.764777 43.320678,-1.120707 85.143413,-0.984632 97.23094,0.316351 88.96324,0.14442 89.44804,1.860109 0.23312,0.825 1.3839,6.352327 2.55729,12.2829484 1.87688,9.486233 2.01251,11.990053 1.12778,20.820753 -0.55311,5.52079 -1.5628,10.70912 -2.24375,11.52961 -1.0695,1.28867 -7.64871,1.46662 -48.31373,1.30678 -25.8916,-0.10176 -66.875631,0.0442 -91.075631,0.32435 -24.2,0.28015 -46.465177,0.30819 -49.4781722,0.0623 z"
+     id="path4501"
+     inkscape:connector-curvature="0" />
+</svg>
