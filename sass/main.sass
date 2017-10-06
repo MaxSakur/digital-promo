@@ -4,196 +4,312 @@
 @import "vars"
 
 // VARs
-
-.free-button
-	cursor: pointer
-	background-image: url("../img/button-bg.svg")
-	background-size: cover
-	background-color: transparent
-	background-repeat: no-repeat
-	opacity: .8
-	height: 50px
-	width: 300px
-	outline: 0
-	text-align: center
-	letter-spacing: 7px
-	border: transparent
+.clearfix
+	clear: both
 
 // CUSTOM
-
+*
+	box-sizing: border-box
 body
-	background-image: url("../img/bg.jpg")
-	background-size: cover
-	background-repeat: no-repeat
-	background-position: center center
-	position: relative
-	max-height: 980px
-	overflow: hidden
-	*
-		color: #fff
-		font-family: 'pribambas'
-.header
-	height: 75px
-	position: relative
-	.bg
-		ul 
-			position: absolute
-			top: 0
-			width: 100%
-			margin-top: 10px
-			height: transparent
-			display: flex
-			justify-content: center
-			text-align: center
-			li
-				list-style-type: none
-				margin: 0 50px
-				width: 100%
-				line-height: 50px
-				a
-					text-decoration: none
-					margin-right: 10px
-					margin-top: 15px
-					position: fixed
-					transition: all .8s
-					&:nth-child(1)
-						margin-left: -50px
-					&:last-child
-						margin-left: 50px
-					&:hover
-						font-size: 50px
-				button
-					font-size: 30px
-					transition: box-shadow .5s
-					&:hover
-						box-shadow: 1px 6px 10px #433550;
-					p
-						margin-top: 0px
-				&:nth-child(1)
-					margin-top: -5px
-				&:nth-child(2) button
-					background-image: url(../img/buttons/button-bg-birjuza.svg)
-				&:nth-child(3) button
-					background-image: url(../img/buttons/button-bg-red.svg)
-				&:nth-child(4) button
-					background-image: url(../img/buttons/button-bg-yellow.svg)
-					
-.main
-	position: relative
-	height: calc(100% - 130px)
-	&-leftpart
-		margin-left: 5%
-		margin-top: 15%
-		width: 30%
-		height: 40%
-		float: left
-		position: relative
-		padding: 2% 0 0 5%
-		background-color: rgba(#433550,.8)
-		&__boyimg
-			position: absolute
-			bottom: 0
-			right: 10%
-			z-index: 1
-		&__talkingwindow
-			background-image: url("../img/red-speach.png")
-			background-repeat: no-repeat
-			background-size: cover
-			background-position: center center
-			position: absolute
-			right: -100px
-			bottom: -150px
-			width: 70%
-			height: 250px
-			z-index: 50
-			transform: rotate(180deg)
-			p
-				text-align: center
-				color: black
-				font-size: 40px
-				margin-top: 75px
-				transform: rotate(-180deg)
-	&-middle
-		height: 600px
-		width: 800px
-		position: absolute
-		left: 30%
-		z-index: 99
-		background-image: url("../img/explosion.png")
-		background-repeat: no-repeat
-		background-size: 101%
-		background-position: center center
-		&-textwrapper
-			width: 100%
-			height: 100%
-			display: flex
-			justify-content: center
-			align-items: center
-			text-align: center
-			
-			p 
-				color: #000
-				font-size: 35px
-				line-height: 40px
-				.p-decor
-					color: #000
-					font-size: 20px
-					font-family: 'Comfortaa', cursive;
-				.p-red-color
-					color: red
-					font-size: 1.5em
-				.p-bi-color
-					color: #30CEE1
-					font-family: 'Comfortaa', cursive;
-	&-rightpart
-		margin-right: 5%
-		margin-top: 15%
-		float: right
-		width: 30%
-		height: 40%
-		position: relative
-		padding: 2% 0 0 5%
-		background-color: rgba(#433550,.8)
-		&__familyimg
-			position: absolute
-			bottom: -25%
-			right: 5%
-			z-index: 1
-		&__talkingwindow
-			background-image: url("../img/red-speach.png")
-			background-repeat: no-repeat
-			background-size: cover
-			background-position: center center
-			position: absolute
-			left: -50px
-			bottom: -150px
-			width: 70%
-			height: 250px
-			z-index: 50
-			transform: rotate(180deg)
-			p
-				text-align: center
-				color: black
-				font-size: 40px
-				margin-top: 50px
-				transform: rotate(-180deg)
-
-
-
-footer
-	position: absolute
-	bottom: 0
-	height: 75px
 	width: 100%
-	svg
-		transform: rotate(180deg)
-	.changed-text
-		position: absolute
-		font-size: 25px
-		margin: 0
-		left: 40%
-		bottom: 10px
-		color: #000
+	height: 100%
+	position: relative
+	color: #000
+
+// max-width definition
+//	
+body
+	padding: 0 20%
+.header, .footer, section
+	padding: 0 80px
+//
+// max-width definition
+
+
+// header
+.header
+	width: 100%
+	margin-bottom: 35px
+	&-presentation
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-top: 50px
+		font-family: 'pt-sans-regular'
+		line-height: 0
+		&:after
+			content: ""
+			display: block
+			width: 90%
+			height: 2px
+			margin-top: 10px
+			background-color: $grey
+		img
+			height: 45px
+			width: 268px
+		p 
+			color: $blue
+	&-eventinfo
+		&--h2
+			color: $accent
+			font-size: 34px
+			text-align: center	
+			font-family: 'circle-bold'
+			margin: 50px 0
+		&--p
+			@extend .header-eventinfo--h2
+			color: $black
+		&--button
+			display: block
+			margin: 0 auto
+			background-color: $accent
+			border: 0
+			color: $white
+			padding: 20px 30px
+			font-size: 30px
+			border-bottom: 2px solid darken($accent, 20%)
+// end of header
+
+// section event-date
+
+.event-date
+	display: table
+	width: 100%
+		
+		
+	&-leftColumn
+		display: table-cell
+		padding: 30px
+		background-color: $accent
+		width: 50%
+		&-header
+			width: 100%
+			&--calendar
+				width: 30%
+				float: left
+				font-family: 'pt-sans-bold'
+				font-size: 22px
+				p:first-child
+					background-color: lighten($black,20%)
+					color: $white
+					width: 100%
+					text-align: center
+					margin: 0
+				p:last-child
+					color: lighten($black,70%)
+					background-color: $white
+					width: 100%
+					margin: 0
+					font-size: 73px
+					line-height: 95px
+					text-align: center
+			&--dateTime
+				width: 60%
+				float: left
+				p
+					margin: 0 0 0 10%
+					color: $white
+					text-transform: uppercase
+					&:nth-child(1)
+						font-family: 'circle-bold'
+						font-size: 30px
+						line-height: 27px
+					&:nth-child(2)
+						font-family: 'circle-bold'
+						font-size: 36px
+					&:nth-child(2):after
+						content: ""
+						display: block
+						width: 90%
+						height: 2px
+						margin-bottom: 10px
+						border-bottom: 1px dashed $white
+					&:nth-child(3)
+						font-family: 'pt-sans-regular'
+						font-size: 24px
+		&-personAbout
+			margin-top: 50px
+			img 
+				display: block
+				margin: 0 auto
+			p
+				text-align: center
+				color: $white
+				&:nth-child(2)
+					font-family: Georgia
+					font-style: italic
+					font-size: 22px
+				&:nth-child(3)
+					text-transform: uppercase
+					font-family: 'pt-sans-bold'
+					font-size: 22px
+		&-personAchievments
+			ul 
+				li
+					color: $white 
+					p 
+						font-family: 'pt-sans-regular'
+						font-size: 18px
+						color: $white
+	&-rightColumn
+		display: table-cell
+		vertical-align: top
+		padding: 30px
+		background-color: lighten($grey, 30%)
+		width: 50%
+			
+		&-header
+			p 
+				font-family: 'pt-sans-bold'
+				text-transform: uppercase
+				color: lighten($black,20%)
+				font-size: 21px
+				text-align: center
+		&-timer
+			margin-left: -20px
+			margin-bottom: 50px
+			li
+				display: inline-block
+				position: relative
+				min-width: 90px
+				text-align: center
+				background-color: #2C3135
+				color: #fff
+				font-size: 40px
+				border-radius: 25%
+				& p
+					margin: 0
+				&:after
+					content: "дней"
+					position: absolute
+					color: #2C3135
+					bottom: -30px
+					left: 25%
+					font-size: 15px
+					font-weight: bold
+					text-transform: uppercase	
+				&:nth-child(2):after
+					content: "часов"
+				&:nth-child(3):after
+					content: "минут"
+				&:nth-child(4):after
+					content: "секунд"
+		&-body
+			&--h2 
+				font-family: 'pt-sans-bold'
+				text-transform: uppercase
+				color: lighten($black,20%)
+				font-size: 21px
+				text-align: center		
+			ul
+				height: 100%
+				li
+					list-style-type: none
+					padding-left: 5%
+					position: relative
+					&:before
+						content: url("../img/check-mark.png")
+						position: absolute
+						left: -20px
+						top: 5px
+					p 
+						font-family: 'pt-sans-regular'
+						font-size: 24px
+						line-height: 28px
+						span
+							font-family: 'pt-sans-bold'
+
+
+// end of section event-date
+
+// targeting section
+
+.targeting
+	text-align: center
+	&:after
+		content: ""
+		display: block
+		width: 100%
+		height: 2px
+		margin-bottom: 10px
+		border-bottom: 1px dashed lighten($black,20%)
+	&--conditions
+		font-family: Georgia
+		font-style: italic
+		font-size: 22px
+		line-height: 28px
+	&--button
+		display: block
+		margin: 0 auto
+		background-color: $accent
+		border: 0
+		color: $white
+		padding: 5px 30px
+		font-size: 30px
+	&--priority
+		font-family: 'pt-sans-regular'
+		font-size: 32px
+		line-height: 42px
+		
+// targeting section
+// mainTextArea section
+
+.mainTextArea
+	&--header
+		font-family: 'pt-sans-bold'
+		font-size: 36px
+		text-align: center
+		line-height: 40px
+	& p:not(.mainTextArea--header)
+		text-align: left
+		font-family: 'pt-sans-regular'
+		font-size: 24px
+		line-height: 28px
+		span
+			font-family: 'pt-sans-bold'
+
+// mainTextArea section
+
+// collage-img section
+.collage-img
+	width: 100%
+	img
+		width: 100%
+		height: auto
+
+// collage-img section
+
+//
+.footer
+	& p 
+		&:nth-child(1)
+			font-family: 'pt-sans-regular'
+			font-size: 30px
+		&:nth-child(2)
+			font-family: 'pt-sans-bold'
+			font-size: 26px
+	& button
+		display: block
+		width: 100%
+		background-color: $accent
+		border: 0
+		color: $white
+		padding: 20px 30px
+		font-size: 30px
+		border-bottom: 2px solid darken($accent, 20%)
+
+	& .social
+		list-style-type: none
+		display: block
+		width: 200px
+		margin: 20px auto
+		li 
+			display: inline-block
+			border-radius: 25%
+
+			
+
+//	
 
 
 @import "media" // Всегда в конце

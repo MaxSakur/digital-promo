@@ -1,21 +1,36 @@
 $(function() {
 
-	$(".changed-text").typed({
-		strings: ["Акция дейтсвует с 3.10.2017", "Акция не действует без меня в команде =)" ,"После пяти просмотров - акция начинает действовать на нервы"],
-		typeSpeed: 100,
-		loop: true,
-		startDelay: 100
-	});
+// Set the date we're counting down to
+var countDownDate = new Date("Oct 21, 2017 15:37:25").getTime();
 
-		
-	var changeClass = function (r,className1,className2) {
-		var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
-		if( regex.test(r.className) ) {
-			r.className = r.className.replace(regex,' '+className2+' ');
-		}
-		else{
-			r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
-		}
-		return r.className;
-	};	
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+
+    // If the count down is over, write some text 
+    if (distance < 0) {
+    	clearInterval(x);
+    	document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+
+
 });
